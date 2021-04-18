@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./recipe.module.css";
+// import style from "./recipe.module.css";
 // import { Card } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
 
@@ -17,7 +17,7 @@ const Recipe = ({ title, calories, image, ingredients }) => {
 
               <ul className="list-styled">
                 {ingredients.map((ingredient) => (
-                  <li className="text-wrap">{ingredient.text}</li>
+                  <li  key={Math.floor(Math.random()*10000)} className="text-wrap">{ingredient.text}</li>
                 ))}
               </ul>
             </div>

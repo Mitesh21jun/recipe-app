@@ -10,21 +10,23 @@ const App = () => {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState(Math.floor(Math.random()*100));
 
-  const URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+ 
 
   //useEffects
   useEffect(() => {
+    const URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+    const getRecipes = async () => {
+      const response = await fetch(URL);
+      const data = await response.json();
+      setRecipes(data.hits);
+      console.log(data.hits);
+      setSearch("");
+    };
     getRecipes();
   }, [query]);
 
   //methods
-  const getRecipes = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setRecipes(data.hits);
-    console.log(data.hits);
-    setSearch("");
-  };
+
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
