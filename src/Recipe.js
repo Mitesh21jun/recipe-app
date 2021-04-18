@@ -29,7 +29,7 @@ const Recipe = ({
               {!cuisineType ? (
                 ""
               ) : (
-                <p className="">Cuisine Type:{cuisineType} </p>
+                <p className="">Cuisine Type: {cuisineType}</p>
               )}
               <p className="">Calories: {calories}</p>
               <ul className="list-styled">
