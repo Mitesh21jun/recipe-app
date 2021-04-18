@@ -60,6 +60,8 @@ const App = () => {
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
+            viewRecipe={recipe.recipe.url}
+            cuisineType={recipe.recipe.cuisineType}
           />
         ))}
       </div></div>
