@@ -40,8 +40,9 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
-      <form onSubmit={getSearch} className="search-form mb-3">
+      <form onSubmit={getSearch} className="search-form mb-1 mt-2">
         <input
+        placeholder="Search Recipes"
           type="text"
           className="search-bar"
           value={search}
