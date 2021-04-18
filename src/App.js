@@ -40,7 +40,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
-      <form onSubmit={getSearch} className="search-form">
+      <form onSubmit={getSearch} className="search-form mb-3">
         <input
           type="text"
           className="search-bar"
@@ -51,7 +51,7 @@ const App = () => {
           Search
         </button>
       </form>
-      <div className="container-fluid">
+      <div className="container-fluid p-0">
         {recipes.map((recipe) => (
           <Recipe
             key={recipe.recipe.label}

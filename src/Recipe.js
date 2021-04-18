@@ -8,7 +8,7 @@ const Recipe = ({ title, calories, image, ingredients }) => {
     <div className="col-lg-4 col-md-6 col-sm-12 pb-2 d-inline-flex">
       <div className="row">
         <div className="">
-          <div className="card pr-3 p-2 ml-3" style={{width : "20rem", boxShadow: '0px 3px 10px rgb(71, 71, 71)'}}>
+          <div className="card pr-3 p-2 m-3" style={{boxShadow: '0px 3px 10px rgb(71, 71, 71)',minWidth:"20em"}}>
           <img src={image} className="card-img-top m-1" alt="..."/>
 
             <div className="card-body">
